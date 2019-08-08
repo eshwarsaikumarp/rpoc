@@ -1,0 +1,42 @@
+@import "../../lib/_mixins.scss";
+@import "../../lib/_variables.scss";
+
+.example {
+  padding: 20px 0;
+  background: #3c40c6;
+
+  @include mq("desktop-wide") {
+    width: 95%;
+    background: $blue;
+  }
+
+  @include mqlg("mobileM") {
+    width: 95%;
+    background: #ffa801;
+  }
+
+  @include mq("iphone5") {
+    width: 100%;
+    background: $maroon;
+  }
+
+  @include mqlg("phone") {
+    width: 95%;
+    background: rgb(179, 179, 180);
+  }
+
+  @include mqlg("tablet") {
+    width: 499px;
+    background: green;
+  }
+
+  @include mqlg("laptop") {
+    width: 700px;
+    background: $drakGray;
+  }
+
+  @include mqlg("laptopL") {
+    width: 700px;
+    background: #3c40c6;
+  }
+}

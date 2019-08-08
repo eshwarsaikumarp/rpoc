@@ -1,0 +1,23 @@
+.loginContainer {
+    text-align: center;
+    border: 1px solid #35b579;
+    margin: 5%;
+    padding: 2%;
+
+    .coloredtext {
+        color: #35b579;
+    }
+
+    img {
+        padding: 20px 0
+    }
+
+    .remember {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .forgot {
+        float: right
+    }
+}

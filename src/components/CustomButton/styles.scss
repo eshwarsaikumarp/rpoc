@@ -1,0 +1,11 @@
+@import "../../lib/_mixins.scss";
+@import "../../lib/_variables.scss";
+
+.btncontainer {
+  border: none;
+  background: #35b579;
+  border-radius: 2px;
+  width: 90%;
+  padding: 5px;
+  color: white;
+}
