@@ -1,5 +1,5 @@
 import API from "../api/API";
-import navData from "../_mockDB/navData.json";
+// import navData from "../_mockDB/navData.json";
 import axios from "axios";
 
 export const fetchPeople = url => dispatch => {

@@ -6,10 +6,12 @@ import { counterWidget } from "../../constants/counterWidget";
 import {
   increaseCounter,
   decreaseCounter,
-  resetCounter
+  resetCounter,
+  testpost
 } from "../../actions/counter-widget-actions";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import AlertBar from "../../components/alertBar";
+import CustomCarousel from "../../components/CustomCarousel";
 import "./styles.scss";
 
 class CounterWidget extends Component {
@@ -30,6 +32,7 @@ class CounterWidget extends Component {
 
   onReset = () => {
     this.setState(() => ({ toggleAlert: true }));
+    testpost();
   };
 
   closeAlert = toggleAlert => {
@@ -80,6 +83,7 @@ class CounterWidget extends Component {
             content={"Are You sure you want to reset the counter value"}
           />
         )}
+        <CustomCarousel />
       </div>
     );
   }

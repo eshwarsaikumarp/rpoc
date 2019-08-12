@@ -3,6 +3,8 @@ import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
 import CustomCheckbox from "../../components/CustomCheckbox";
 import CustomModal from "../../components/CustomModal";
+import { Carousel } from "react-bootstrap";
+
 import "./styles.scss";
 
 class LoginPage extends Component {
@@ -66,7 +68,7 @@ class LoginPage extends Component {
     return (
       <div className="main-container">
         <div className="loginContainer">
-          <img src="https://via.placeholder.com/270" />
+          <img alt="asd" src="https://via.placeholder.com/270" />
           <CustomInput
             type="text"
             handleChange={this.onChange}
@@ -94,8 +96,32 @@ class LoginPage extends Component {
         {this.state.enableModal && (
           <CustomModal
             handleModal={e => this.handleModal(e)}
-            content={errorMsg}
-          />
+            // content={errorMsg}
+          >
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781"
+                  alt="First slide"
+                />
+                <Carousel.Caption>
+                  <p>{errorMsg}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src="https://cmeimg-a.akamaihd.net/640/clsd/getty/c64f76dc20c246ca88ee180fe4b4b781"
+                  alt="Second slide"
+                />
+
+                <Carousel.Caption>
+                  <p>{errorMsg}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
+          </CustomModal>
         )}
       </div>
     );

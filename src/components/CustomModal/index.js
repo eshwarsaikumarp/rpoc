@@ -15,15 +15,14 @@ class CustomModal extends Component {
     return (
       <div id="modalbar">
         <div className="modal-container">
+          <p className="closeIcon" onClick={() => this.closeModal()}>
+            X
+          </p>
           <h2>Modal Window</h2>
           <hr />
           <div className="content">{this.props.content}</div>
+          {this.props.children}
           <hr />
-          <div className="actions">
-            <button className="okBtn" onClick={() => this.closeModal()}>
-              Ok
-            </button>
-          </div>
         </div>
       </div>
     );
